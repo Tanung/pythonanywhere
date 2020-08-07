@@ -14,4 +14,4 @@ class Choice(models.Model):
     votes = models.IntegerField(default=0)
 
     def _str_(self):
-        return f'{self._text} - {self.choice_text} - {self.vole}'
+        return f'{self.question.question_text} - {self.choice_text} - {self.voles}'
