@@ -1,49 +1,20 @@
-from django.shortcuts import render
+from django.shortcuts import render , redirect
 from django.http import HttpResponse
-
+#from django.contrib.auth import authenticate
+#from django.contrib.auth import login as login_id
+#from django.contrib.auth.models import User
 from .models import Question, Choice
-# Create your views here.
-#def index(req):
-    #return render(req, "mywed/index.html")
 
-#def united(req):
-    #return render(req, "mywed/united.html")
 
-def Homepage(req):
-    return render(req, "mywed/Homepage.html")
+def index(req):
+    return render(req, "mywed/index.html")
 
-def History(req):
-    return render(req, "mywed/History.html")
-def h1(req):
-    return render(req, "mywed/h1.html")
-def h2(req):
-    return render(req, "mywed/h2.html")
-def h3(req):
-    return render(req, "mywed/h3.html")
-def h4(req):
-    return render(req, "mywed/h4.html")
-def h5(req):
-    return render(req, "mywed/h5.html")
+def login(req):
+    return render(req, "mywed/login.html")
 
-def Culture(req):
-    return render(req, "mywed/Culture.html")
-def c1(req):
-    return render(req, "mywed/c1.html")
-def c2(req):
-    return render(req, "mywed/c2.html")
-def c3(req):
-    return render(req, "mywed/c3.html")
-def c4(req):
-    return render(req, "mywed/c4.html")
 
-def Planet(req):
-    return render(req, "mywed/Planet.html")
 
-def Science(req):
-    return render(req, "mywed/Science.html")
 
-def Communities(req):
-    return render(req, "mywed/Communities.html")
 
 def detail(request, question_id):
     question = Question.objects.get(id=question_id)
