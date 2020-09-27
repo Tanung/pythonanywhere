@@ -1,4 +1,4 @@
-
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en-US">
@@ -208,9 +208,11 @@ var ctNocache = {"ajaxurl":"https:\/\/colorlib.com\/shapely\/wp-admin\/admin-aja
 </button>
 <div class="module-group right">
 <div class="module left">
+
+
 <div class="collapse navbar-collapse navbar-ex1-collapse"><ul id="menu" class="menu"><li id="menu-item-1636" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-1636 active"><a title="Home" href="">Home</a></li>
 <li id="menu-item-1637" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1637"><a title="Admin" href="admin">Admin</a></li>
-<li id="menu-item-1639" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1639 dropdown"><a title="About The Tests" href="https://colorlib.com/shapely/about/">Animals</a><span class="dropdown-toggle shapely-dropdown" data-toggle="dropdown"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+<li id="menu-item-1639" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1639 dropdown"><a title="Animal" href="####">Animals</a><span class="dropdown-toggle shapely-dropdown" data-toggle="dropdown"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
 <ul role="menu" class=" dropdown-menu">
 <li id="menu-item-1697" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1697"><a title="###" href="https://colorlib.com/shapely/about/page-image-alignment/">###</a></li>
 <li id="menu-item-1698" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1698"><a title="###" href="https://colorlib.com/shapely/about/page-markup-and-formatting/">###</a></li>
@@ -218,23 +220,18 @@ var ctNocache = {"ajaxurl":"https:\/\/colorlib.com\/shapely\/wp-admin\/admin-aja
 <li id="menu-item-1641" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1641"><a title="###" href="https://colorlib.com/shapely/about/page-with-comments/">###</a></li>
 <li id="menu-item-1642" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1642"><a title="###" href="https://colorlib.com/shapely/about/page-with-comments-disabled/">###</a></li>
 </ul>
-<li id="menu-item-1637" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1637"><a title="login" href="https://colorlib.com/shapely/blog/">Login</a></li>
-<li id="menu-item-1637" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1637"><a title="logout" href="https://colorlib.com/shapely/blog/">Logout</a></li>
 </li>
 
+
+{% if user.is_authenticated %}
+<li id="menu-item-1637" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1637"><a title="logout" href="logout">Logout</a></li>&nbsp;&nbsp;
+Welcome {{ user }}
+{% else %}
+<li id="menu-item-1637" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1637"><a title="login" href="login">Login</a></li>
+{% endif %}
+</li>
 </ul>
 </ul></div> </div>
-
-<div class="module widget-handle search-widget-handle hidden-xs hidden-sm">
-<button class="search">
-<i class="fa fa-search"></i>
-<span class="title">Site Search</span>
-</button>
-<div class="function">
-<form role="search" method="get" id="searchform" class="search-form" action="https://colorlib.com/shapely/">
-<label class="screen-reader-text" for="s">Search for:</label>
-<input type="text" placeholder="Type Here" value="" name="s" id="s" />
-<button type="submit" class="searchsubmit"><i class="fa fa-search" aria-hidden="true"></i><span class="screen-reader-text">Search</span></button>
 </form> </div>
 </div>
 </div>
@@ -244,6 +241,7 @@ var ctNocache = {"ajaxurl":"https:\/\/colorlib.com\/shapely\/wp-admin\/admin-aja
 </nav>
 </div>
 </header>
+
 <div id="content" class="main-container">
 <section class="content-area ">
 <div id="main" class="" role="main">
@@ -253,9 +251,23 @@ var ctNocache = {"ajaxurl":"https:\/\/colorlib.com\/shapely\/wp-admin\/admin-aja
 <div class="row">
 <div class="top-parallax-section">
 <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
+
 <h1>Welcome Aocumentary Animal World</h1><div class="mb32">
+
+
+
+{% block content %}
+
+
+{% endblock %}
+
+
 </div><a class="btn btn-lg btn-filled" href="">Home</a><a class="btn btn-lg btn-white" href="#">Register</a> </div>
 </div>
+
+
+
+
 
 </div>
 </div>

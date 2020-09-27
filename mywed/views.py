@@ -1,16 +1,32 @@
 from django.shortcuts import render , redirect
 from django.http import HttpResponse
-#from django.contrib.auth import authenticate
-#from django.contrib.auth import login as login_id
-#from django.contrib.auth.models import User
+from django.contrib.auth import authenticate
+from django.contrib.auth import login, logout
+from django.contrib.auth.models import User
 from .models import Question, Choice
 
 
 def index(req):
     return render(req, "mywed/index.html")
 
-def login(req):
-    return render(req, "mywed/login.html")
+
+def login_user(req):
+    if req.method == 'POST':
+        user = User.objects.get(username=req.POST['username'])
+        user = authenticate(username=user.username, password=req.POST['password'])
+        if user:
+            login(req, user)
+            return redirect('/')
+
+        else:
+            return render(req, 'mywed/login.html')
+
+    else:
+        return render(req, 'mywed/login.html')
+
+def logout_user(req):
+    logout(req)
+    return redirect('/')
 
 
 
