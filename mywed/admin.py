@@ -1,11 +1,6 @@
 from django.contrib import admin
 
-from .models import Question, Choice, Title, TypeStory
+from .models import Animal_Type, Animal
 
-admin.site.register(Question)
-
-admin.site.register(Choice)
-
-admin.site.register(Title)
-
-admin.site.register(TypeStory)
+admin.site.register(Animal_Type)
+admin.site.register(Animal)

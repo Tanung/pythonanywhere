@@ -202,7 +202,7 @@ var ctNocache = {"ajaxurl":"https:\/\/colorlib.com\/shapely\/wp-admin\/admin-aja
 <div class="container nav-bar">
 <div class="flex-row">
 <div class="module left site-title-container">
-<a href="https://colorlib.com/shapely/" class="custom-logo-link"><span class="site-title">SarakaDee</span></a> </div>
+<span class="site-title">SarakaDee</span> </div>
 <button class="module widget-handle mobile-toggle right visible-sm visible-xs">
 <i class="fa fa-bars"></i>
 </button>
@@ -210,15 +210,15 @@ var ctNocache = {"ajaxurl":"https:\/\/colorlib.com\/shapely\/wp-admin\/admin-aja
 <div class="module left">
 
 
-<div class="collapse navbar-collapse navbar-ex1-collapse"><ul id="menu" class="menu"><li id="menu-item-1636" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-1636 active"><a title="Home" href="">Home</a></li>
+<div class="collapse navbar-collapse navbar-ex1-collapse"><ul id="menu" class="menu"><li id="menu-item-1636" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-1636 active"><a title="Home" href="/">Home</a></li>
 <li id="menu-item-1637" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1637"><a title="Admin" href="admin">Admin</a></li>
 <li id="menu-item-1639" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1639 dropdown"><a title="Animal" href="####">Animals</a><span class="dropdown-toggle shapely-dropdown" data-toggle="dropdown"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
 <ul role="menu" class=" dropdown-menu">
-<li id="menu-item-1697" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1697"><a title="###" href="https://colorlib.com/shapely/about/page-image-alignment/">###</a></li>
-<li id="menu-item-1698" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1698"><a title="###" href="https://colorlib.com/shapely/about/page-markup-and-formatting/">###</a></li>
-<li id="menu-item-1640" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1640"><a title="###" href="https://colorlib.com/shapely/about/clearing-floats/">###</a></li>
-<li id="menu-item-1641" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1641"><a title="###" href="https://colorlib.com/shapely/about/page-with-comments/">###</a></li>
-<li id="menu-item-1642" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1642"><a title="###" href="https://colorlib.com/shapely/about/page-with-comments-disabled/">###</a></li>
+<li id="menu-item-1697" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1697"><a title="###" href="###">###</a></li>
+<li id="menu-item-1698" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1698"><a title="###" href="###">###</a></li>
+<li id="menu-item-1640" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1640"><a title="###" href="###">###</a></li>
+<li id="menu-item-1641" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1641"><a title="###" href="###">###</a></li>
+<li id="menu-item-1642" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1642"><a title="###" href="###">###</a></li>
 </ul>
 </li>
 
@@ -229,6 +229,8 @@ Welcome {{ user }}
 {% else %}
 <li id="menu-item-1637" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1637"><a title="login" href="login">Login</a></li>
 {% endif %}
+
+
 </li>
 </ul>
 </ul></div> </div>
@@ -255,14 +257,15 @@ Welcome {{ user }}
 <h1>Welcome Aocumentary Animal World</h1><div class="mb32">
 
 
-
-{% block content %}
-
-
-{% endblock %}
+<div>
+    {% block content %}
 
 
-</div><a class="btn btn-lg btn-filled" href="">Home</a><a class="btn btn-lg btn-white" href="#">Register</a> </div>
+    {% endblock %}
+</div>
+
+
+</div><a class="btn btn-lg btn-filled" href="/">Home</a><a class="btn btn-lg btn-white" href="register">Register</a> </div>
 </div>
 
 
@@ -285,13 +288,11 @@ Welcome {{ user }}
 <div class="copyright-text">
 </div>
 <div class="footer-credits">
-Theme by <a href="https://colorlib.com/" target="_blank" title="Colorlib">Colorlib</a> Powered by <a href="https://wordpress.org/" target="_blank" title="WordPress.org">WordPress</a> </div>
+Jakkaphat.ne.62@ubu.ac.th
+</div>
 </div>
 <div class="col-sm-6 text-right">
-<nav id="social" class="social-icons"><ul id="menu-social-items" class="list-inline social-list"><li id="menu-item-1893" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1893"><a href="https://facebook.com/colorlib"><i class="social_icon fa"><span>Colorlib</span></i></a></li>
-<li id="menu-item-1894" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1894"><a href="https://twitter.com/colorlib"><i class="social_icon fa"><span>Twitter</span></i></a></li>
-<li id="menu-item-1895" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1895"><a href="https://www.linkedin.com/company-beta/18049034/"><i class="social_icon fa"><span>Linkedin</span></i></a></li>
-<li id="menu-item-1923" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1923"><a href="https://youtube.com/c/Colorlib"><i class="social_icon fa"><span>Youtube</span></i></a></li>
+<nav id="social" class="social-icons"><ul id="menu-social-items" class="list-inline social-list"><li id="menu-item-1893" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1893"><a href="https://www.facebook.com/profile.php?id=100022657363499"><i class="social_icon fa"><span>Facebook</span></i></a></li>
 <li id="menu-item-1924" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1924"><a href="https://www.instagram.com/colorlib/"><i class="social_icon fa"><span>Instagram</span></i></a></li>
 </ul></nav> </div>
 </div>
