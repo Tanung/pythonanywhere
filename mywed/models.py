@@ -17,19 +17,20 @@ from django.db import models
 
 
 class Animal_Type(models.Model):
-    text = models.CharField(max_length=200)
-
-    def _str_(self):
-        return f'{self.animal_type.text} - {self.name} - {self.score} score.'
-
-
-class Animal(models.Model):
-    animal_type = models.ForeignKey(Animal_Type, on_delete=models.CASCADE)
-    name = models.CharField(max_length=200)
-    score = models.IntegerField(default=0)
+    text = models.CharField(max_length=200,blank=True)
 
     def _str_(self):
         return f'{self.text}'
+
+
+class Animal(models.Model):
+    name = models.CharField(max_length=200,blank=True)
+    img = models.CharField(max_length=200,blank=True)
+    video = models.CharField(max_length=1000,blank=True)
+    detail = models.CharField(max_length=1000,blank=True)
+
+    def _str_(self):
+        return f'{self.name} - {self.img} - {self.video} - {self.detail}'
 
 
 
