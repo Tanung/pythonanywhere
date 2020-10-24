@@ -155,94 +155,6 @@ body {font-size:16px;}
 		display: none;
 	}
 </style>
-
-<style type="text/css">
-.form-style-1 {
-	margin:10px auto;
-	max-width: 400px;
-	padding: 20px 12px 10px 20px;
-	font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-}
-.form-style-1 li {
-	padding: 0;
-	display: block;
-	list-style: none;
-	margin: 10px 0 0 0;
-}
-.form-style-1 label{
-	margin:0 0 3px 0;
-	padding:0px;
-	display:block;
-	font-weight: bold;
-}
-.form-style-1 input[type=text],
-.form-style-1 input[type=date],
-.form-style-1 input[type=datetime],
-.form-style-1 input[type=number],
-.form-style-1 input[type=search],
-.form-style-1 input[type=time],
-.form-style-1 input[type=url],
-.form-style-1 input[type=email],
-textarea,
-select{
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	border:1px solid #BEBEBE;
-	padding: 7px;
-	margin:0px;
-	-webkit-transition: all 0.30s ease-in-out;
-	-moz-transition: all 0.30s ease-in-out;
-	-ms-transition: all 0.30s ease-in-out;
-	-o-transition: all 0.30s ease-in-out;
-	outline: none;
-}
-.form-style-1 input[type=text]:focus,
-.form-style-1 input[type=date]:focus,
-.form-style-1 input[type=datetime]:focus,
-.form-style-1 input[type=number]:focus,
-.form-style-1 input[type=search]:focus,
-.form-style-1 input[type=time]:focus,
-.form-style-1 input[type=url]:focus,
-.form-style-1 input[type=email]:focus,
-.form-style-1 textarea:focus,
-.form-style-1 select:focus{
-	-moz-box-shadow: 0 0 8px #88D5E9;
-	-webkit-box-shadow: 0 0 8px #88D5E9;
-	box-shadow: 0 0 8px #88D5E9;
-	border: 1px solid #88D5E9;
-}
-.form-style-1 .field-divided{
-	width: 49%;
-}
-
-.form-style-1 .field-long{
-	width: 100%;
-}
-.form-style-1 .field-select{
-	width: 100%;
-}
-.form-style-1 .field-textarea{
-	height: 100px;
-}
-.form-style-1 input[type=submit], .form-style-1 input[type=button]{
-	background: #3399FF;
-	padding: 8px 15px 8px 15px;
-	border: none;
-	color: #fff;
-}
-.form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
-	background: #4691A4;
-	box-shadow:none;
-	-moz-box-shadow:none;
-	-webkit-box-shadow:none;
-}
-.form-style-1 .required{
-	color:red;
-}
-</style>
-
-
 <link rel='stylesheet' id='woocommerce-smallscreen-css' href='https://colorlib.com/shapely/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=4.5.2' type='text/css' media='only screen and (max-width: 768px)' />
 <link rel='stylesheet' id='woocommerce-general-css' href='https://colorlib.com/shapely/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=4.5.2' type='text/css' media='all' />
 <style id='woocommerce-inline-inline-css' type='text/css'>
@@ -338,14 +250,56 @@ Welcome {{ user }}
 </div>
 </header>
 
+<style>
+  table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
-    {% block content %}
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" />
-    </form>
-    {% endblock %}
+td, th {
+  border: 2px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+
+<div class="w3-main" style="margin-left:50px;margin-right:50px">
+<div>
+<div class="container">
+  <div class="card border-0 shadow my-5">
+    <div class="card-body p-5">
+      <h1 class="font-weight-light">แสดงสัตว์ทั้งหมด</h1>
+      <br>
+      <table>
+        <tr>
+            <th>ID</th>
+          <th>ชื่อสัตว์</th>
+          <th>ลิงค์รูป</th>
+          <th>ลิงค์วิดีโอ</th>
+          {% for i in allanimals %}
+        </tr>
+        <tr>
+
+            <td>{{ i.id }}</td>
+          <td>{{ i.name }}</td>
+          <td>{{ i.img }}</td>
+          <td>{{ i.video }}</td>
+          {% endfor %}
+        </tr>
+
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
 
 
 

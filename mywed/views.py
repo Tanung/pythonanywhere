@@ -22,12 +22,9 @@ def animal_user(req):
     animals = Animal.objects.all()
     return render(req, "mywed/animal_user.html", {'animals': animals})
 
-#def add_animal(req):
-#    animals = Animal.objects.all()
-#    ins = {
-#        'animals' : animals
-#        }
-#    return render(req, 'mywed/add_animal.html', ins)
+def allanimal(req):
+    allanimals = Animal.objects.all()
+    return render(req ,'mywed/allanimal.html' ,{'allanimals':allanimals})
 
 def add_animal(request):
     if request.method == 'POST':
@@ -87,14 +84,4 @@ def register(req):
 
 
 
-#def detail(request, question_id):
-#    question = Question.objects.get(id=question_id)
-#    choices = Choice.objects.filter(question=question)
-#    return render(request, 'mywed/detail.html', { 'question': question, 'choices': choices})
 
-#def results(request, question_id):
-#    response = "You're looking at the results of question %s."
-#    return HttpResponse(response % question_id)
-
-#def vote(request, question_id):
-#    return HttpResponse("You're voting on question %s." % question_id)

@@ -11,7 +11,7 @@ urlpatterns = [
     path('animal', views.animal, name='animal'),
     path('animal_user', views.animal_user, name='animal_user'),
     path('add_animal', views.add_animal, name='add_animal'),
-    #path('',views.Upload, name='Upload'),
+    path('allanimal',views.allanimal, name='allanimal'),
 
     #path('<int:question_id>/', views.detail, name='detail'),
     #path('<int:question_id>/results/', views.results, name='results'),
